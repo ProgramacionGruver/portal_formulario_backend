@@ -3,9 +3,10 @@ import { createTransport } from 'nodemailer'
 export const transporter = createTransport({
     host: "smtp-mail.outlook.com",
     secureConnection: false,
-    port: 587, 
+    port: 587,
+    secure: false,
     tls: {
-    ciphers:'SSLv3'
+        rejectUnauthorized: false,
     },
-    auth: { user: 'sgruver@gruver.mx', pass: 'Gomsa01' }
+    auth: { user: 's.gruver@gruver.mx', pass: 'Soporte1' }
 })
